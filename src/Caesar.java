@@ -23,10 +23,10 @@ public class Caesar {
         letter = Character.toLowerCase(letter);
         if (ENG_ALPHABET.contains(String.valueOf(letter))) {
             if (key < 0) key = ENG_ALPHABET.length() + key;
-            encodedChar = ENG_ALPHABET.charAt((ENG_ALPHABET.indexOf(letter) + key) % 26);
+            encodedChar = ENG_ALPHABET.charAt((ENG_ALPHABET.indexOf(letter) + key) % ENG_ALPHABET.length());
         } else if (RU_ALPHABET.contains(String.valueOf(letter))) {
             if (key < 0) key = RU_ALPHABET.length() + key;
-            encodedChar = RU_ALPHABET.charAt((RU_ALPHABET.indexOf(letter) + key) % 33);
+            encodedChar = RU_ALPHABET.charAt((RU_ALPHABET.indexOf(letter) + key) % RU_ALPHABET.length());
         }
         return isUpperCase ? Character.toUpperCase(encodedChar) : encodedChar;
     }
