@@ -23,9 +23,10 @@ public class Main {
             System.out.println(e.getMessage());
         }
 
-        try (FileInputStream fileInputStream = new FileInputStream(args[0]);
-             FileOutputStream fileOutputStream = new FileOutputStream(PREFIX + (args[0]))) {
-
+        try (
+                FileInputStream fileInputStream = new FileInputStream(args[0]);
+                FileOutputStream fileOutputStream = new FileOutputStream(PREFIX + (args[0]))
+        ) {
                 byte[] buffer = new byte[1024];
                 int count;
 
